@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bikes</title>
+        <meta name="keywords" content="html,css,javaScript" />
+        <meta name="description" content="Bikes" />
+        <meta name="author" content="Daniela Damjanoska" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <!-- Latest compiled and minified BOOTSTRAP CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+            integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+            crossorigin="anonymous"
+        />
+
+        <!-- Local CSS -->
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+        <!-- Font-awesome 5 cdn -->
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container main">
+            <!-- navbar section -->
+            <nav
+                class="
+                    navbar navbar-expand-lg
+                    bg-transparent
+                    d-flex
+                    border-bottom
+                    justify-content-between
+                    align-items-center
+                    pt-4
+                "
+            >
+                <a class="navbar-brand" href="#">
+                    <img src="./img/logo.png" alt="" />
+                </a>
+                <ul class="navbar-nav menu">
+                    <li class="nav-item active">
+                        <a
+                            class="nav-link text-uppercase font-weight-bold"
+                            href="#"
+                            >Home <span class="sr-only">(current)</span></a
+                        >
+                    </li>
+                    <li class="nav-item text-uppercase font-weight-bold">
+                        <a class="nav-link" href="#">Bikes</a>
+                    </li>
+                    <li class="nav-item text-uppercase font-weight-bold">
+                        <a class="nav-link" href="#">Gear</a>
+                    </li>
+                    <li class="nav-item text-uppercase font-weight-bold">
+                        <a class="nav-link" href="#">Parts</a>
+                    </li>
+                    <li class="nav-item text-uppercase font-weight-bold">
+                        <a class="nav-link" href="#">Tires</a>
+                    </li>
+                    <li class="nav-item text-uppercase font-weight-bold">
+                        <a class="nav-link" href="#">Service-info</a>
+                    </li>
+                    <li class="nav-item text-uppercase font-weight-bold">
+                        <a class="nav-link" href="#">Catalogues</a>
+                    </li>
+                    <li class="nav-item text-uppercase font-weight-bold">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-shopping-bag"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- header section -->
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="py-3 border-bottom">Bikes</h1>
+                </div>
+            </div>
+
+            <!-- main-section -->
+            <div class="row py-3">
+                <div class="col-3">
+                    <div class="row">
+                        <div class="col-12 pt-2">
+                            <h2 class="h4 font-weight-bold pb-3">Filter by</h2>
+                            <p class="filter-items pb-2 active">
+                                <span>Show all</span>
+                                <span class="badge-pill showAll">0</span>
+                            </p>
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 pt-2">
+                            <h3 class="h5 font-weight-bold pb-3">Gender</h3>
+                            <p class="filter-items">
+                                <span>Male</span>
+                                <span class="male badge-pill">0</span>
+                            </p>
+                            <p class="filter-items pb-2">
+                                <span>Female</span>
+                                <span class="female badge-pill">0</span>
+                            </p>
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 pt-2">
+                            <h3 class="h5 font-weight-bold pb-3">Brand</h3>
+                            <p class="filter-items">
+                                <span>LE GRAND BIKES</span>
+                                <span class="grand badge-pill">0</span>
+                            </p>
+                            <p class="filter-items">
+                                <span>KROSS</span>
+                                <span class="kross badge-pill">0</span>
+                            </p>
+                            <p class="filter-items">
+                                <span>EXPLORER</span>
+                                <span class="explorer badge-pill">0</span>
+                            </p>
+                            <p class="filter-items">
+                                <span>VISITOR</span>
+                                <span class="visitor badge-pill">0</span>
+                            </p>
+                            <p class="filter-items">
+                                <span>PONY</span>
+                                <span class="pony badge-pill">0</span>
+                            </p>
+                            <p class="filter-items">
+                                <span>FORCE</span>
+                                <span class="force badge-pill">0</span>
+                            </p>
+                            <p class="filter-items">
+                                <span>E-BIKES</span>
+                                <span class="eBikes badge-pill">0</span>
+                            </p>
+                            <p class="filter-items">
+                                <span>IDEAL</span>
+                                <span class="ideal badge-pill">0</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="row bikesWrapper"></div>
+                </div>
+            </div>
+
+            <!-- footer-section -->
+            <div class="row bg-light py-5 footer">
+                <div class="col-3 border-right social">
+                    <h3 class="font-weight-bold h5 pb-4">Social share</h3>
+                    <a
+                        href="https://www.facebook.com/"
+                        class="mr-2"
+                        target="blank"
+                        ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a
+                        href="https://www.instagram.com/"
+                        class="mr-2"
+                        target="blank"
+                        ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a href="https://twitter.com/" class="mr-2" target="blank"
+                        ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a href="https://www.linkedin.com/" target="blank"
+                        ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                </div>
+                <div class="col-3 border-right">
+                    <h3 class="font-weight-bold h5">Event info</h3>
+                    <ul>
+                        <li><a href="#">Enter Now</a></li>
+                        <li><a href="#">Event Info</a></li>
+                        <li><a href="#">Course Maps</a></li>
+                        <li><a href="#">Race Pack</a></li>
+                        <li><a href="#">Result</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Am I Registered?</a></li>
+                    </ul>
+                </div>
+                <div class="col-3 border-right">
+                    <h3 class="font-weight-bold h5">Registration</h3>
+                    <ul>
+                        <li><a href="#">Volunteers</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Results</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Service Plus</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h3 class="font-weight-bold h5">Schedule</h3>
+                    <ul>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Videos</a></li>
+                        <li><a href="#">Results</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Volunteers</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

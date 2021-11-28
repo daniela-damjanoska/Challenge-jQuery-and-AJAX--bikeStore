@@ -1,0 +1,111 @@
+body {
+    background-color: #e7e7e7;
+}
+
+.main {
+    background-color: white;
+    color: #000000cc;
+}
+
+.navbar-brand img {
+    width: 70px;
+}
+
+.navbar .nav-link,
+.footer ul li a {
+    color: #000000cc !important;
+    transition: color 0.3s ease-out;
+}
+
+.navbar .nav-link:hover,
+.footer ul li a:hover {
+    color: #ffa500 !important;
+}
+
+.navbar .menu .nav-link:hover {
+    background-color: #e7e7e7;
+}
+
+.filter-items .badge-pill {
+    background-color: #d3d3d3;
+    color: #5c5c5c;
+    font-weight: bold;
+}
+
+.filter-items {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.active {
+    color: #ffa500;
+    font-weight: bold;
+}
+
+.filter-items span:first-child,
+.filter-items .badge-pill,
+.footer .social a {
+    transition: all 0.3s ease-out;
+}
+
+.filter-items:hover span:first-child {
+    color: #ffa500;
+}
+
+.filter-items:hover .badge-pill,
+.active .badge-pill,
+.card .card-body,
+.footer .social a {
+    background-color: #ffa500;
+}
+
+.card {
+    cursor: pointer;
+}
+
+.card:hover {
+    border: 2px solid #ffa500;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card .img-wrapper {
+    max-height: 160px;
+}
+
+.card .img-wrapper img {
+    height: 100%;
+}
+
+.footer .social a {
+    color: #ffffff;
+    padding: 8px 0;
+    border-radius: 3px;
+}
+
+.footer .social a:hover {
+    background-color: #808080;
+}
+
+.footer .social a i {
+    width: 35px;
+    text-align: center;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 2;
+}
+
+.footer ul li a:hover {
+    text-decoration: none;
+}
+
+/*use color:orange for the orange color*/
+/*use background-color: #d3d3d3; color: #5c5c5c; for the badges*/
+/*use color:grey for the social-share icons on hover*/ ;
