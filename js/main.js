@@ -1,5 +1,6 @@
 $(function () {
-    const bikesWrapper = $('.bikesWrapper');
+    const bikesWrapper = $('.bikesWrapper'),
+        filterItems = $('.filter-items');
 
     $.get('https://json-project3.herokuapp.com/products', function (bikes) {
         //function to render the bikes
@@ -25,36 +26,25 @@ $(function () {
         const filterGender = query =>
                 bikes.filter(bike => bike.gender === query),
             filterBrand = query => bikes.filter(bike => bike.brand === query),
-            renderNum = (el, arr) => $(el).text(arr.length),
-            //filter the bikes
-            filterMale = filterGender('MALE'),
-            filterFemale = filterGender('FEMALE'),
-            filterGrand = filterBrand('LE GRAND BIKES'),
-            filterKross = filterBrand('KROSS'),
-            filterExplorer = filterBrand('EXPLORER'),
-            filterVisitor = filterBrand('VISITOR'),
-            filterPony = filterBrand('PONY'),
-            filterForce = filterBrand('FORCE'),
-            filterEBikes = filterBrand('E-BIKES'),
-            filterIdeal = filterBrand('IDEAL'),
-            filterItems = $('.filter-items');
+            renderNum = (el, arr) => $(el).text(arr.length);
 
         //render all the bikes on page load
         renderBikes(bikes);
 
         //render the number of filtered bikes
         renderNum('.showAll', bikes);
-        renderNum('.male', filterMale);
-        renderNum('.female', filterFemale);
-        renderNum('.grand', filterGrand);
-        renderNum('.kross', filterKross);
-        renderNum('.explorer', filterExplorer);
-        renderNum('.visitor', filterVisitor);
-        renderNum('.pony', filterPony);
-        renderNum('.force', filterForce);
-        renderNum('.eBikes', filterEBikes);
-        renderNum('.ideal', filterIdeal);
+        renderNum('.male', filterGender('MALE'));
+        renderNum('.female', filterGender('FEMALE'));
+        renderNum('.grand', filterBrand('LE GRAND BIKES'));
+        renderNum('.kross', filterBrand('KROSS'));
+        renderNum('.explorer', filterBrand('EXPLORER'));
+        renderNum('.visitor', filterBrand('VISITOR'));
+        renderNum('.pony', filterBrand('PONY'));
+        renderNum('.force', filterBrand('FORCE'));
+        renderNum('.eBikes', filterBrand('E-BIKES'));
+        renderNum('.ideal', filterBrand('IDEAL'));
 
+        //on click add the active class and render the filtered bikes
         filterItems.on('click', function () {
             let $this = $(this);
             const query = $this.find('span:first').text().toUpperCase();
